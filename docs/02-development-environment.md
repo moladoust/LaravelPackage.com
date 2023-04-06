@@ -41,6 +41,7 @@ An example `composer.json` is highlighted below.
   "description": "A demo package",
   "type": "library",
   "license": "MIT",
+  "minimum-stability": "dev",
   "authors": [
     {
       "name": "John Doe",
@@ -137,7 +138,7 @@ Add the following "repositories" key below the "scripts" section in `composer.js
 You can now require your local package in the Laravel application using your chosen namespace of the package. Following our example, this would be:
 
 ```bash
-composer require johndoe/blogpackage
+composer require johndoe/blogpackage:div-main
 ```
 
 By default, the package is added under `vendor` folder as a symlink if possible. If you would like to make a physical copy instead (i.e. _mirroring_), add the field `"symlink": false` to the repository definition's `options` property:
